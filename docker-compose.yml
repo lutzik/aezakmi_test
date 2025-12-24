@@ -1,0 +1,14 @@
+services:
+  agora-backend:
+    build: .
+    container_name: agora-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - AGORA_APP_ID=${AGORA_APP_ID}
+      - AGORA_APP_CERTIFICATE=${AGORA_APP_CERTIFICATE}
+      - DATABASE_URL=sqlite:////app/app.db
+    volumes:
+      - ./app.db:/app/app.db
+      - ./.env:/app/.env
+    restart: unless-stopped
