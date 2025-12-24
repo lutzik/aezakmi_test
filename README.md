@@ -18,9 +18,10 @@
     `docker-compose up --build`
 
 ## Примеры
-	`http://127.0.0.1:8000/docs`
-
+	http://127.0.0.1:8000/docs
 
 ## Тесты
 	PYTHONPATH=src python -m pytest
 
+## Затраты времени
+	7-8 часов
